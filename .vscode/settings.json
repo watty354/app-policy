@@ -1,0 +1,19 @@
+{
+  "cSpell.words": [
+    "bucketlist",
+    "Bucketlistitem",
+    "lucide",
+    "Shadcn",
+    "Suspence",
+    "tailwindcss"
+  ],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+    // "source.addMissingImports": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}

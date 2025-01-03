@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Home() {
   return (
     <div className="md:max-w-3xl md:mx-auto mb-5">
-      <Tabs defaultValue="account" className="w-full mx-auto">
+      <Tabs defaultValue="app-using" className="w-full mx-auto">
         <TabsList>
           <TabsTrigger value="app-using">アプリ概要</TabsTrigger>
           <TabsTrigger value="terms-of-service">利用規約</TabsTrigger>

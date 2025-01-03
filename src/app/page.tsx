@@ -1,12 +1,24 @@
+"use client";
+import { useRouter, useSearchParams } from "next/navigation";
 import { AppUsing } from "@/app/_components/app-using";
 import { PrivacyPolicy } from "@/app/_components/privacy-policy";
 import { TermsOfService } from "@/app/_components/terms-of-service";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const handleTabChange = (value: string) => {
+    router.push(`/?query=${value}`);
+  };
   return (
     <div className="md:max-w-3xl md:mx-auto mb-5">
-      <Tabs defaultValue="app-using" className="w-full mx-auto">
+      <Tabs
+        onValueChange={handleTabChange}
+        className="w-full mx-auto"
+        defaultValue={searchParams.get("query") || "app-using"}
+      >
         <TabsList>
           <TabsTrigger value="app-using">アプリ概要</TabsTrigger>
           <TabsTrigger value="terms-of-service">利用規約</TabsTrigger>
